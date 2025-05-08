@@ -20,14 +20,6 @@
       "Parameters": {
         "Stage": "execute"
       },
-      "Next": "CheckCompleted"
-    },
-    "CheckCompleted": {
-      "Type": "Task",
-      "Resource": "manageiq://embedded_terraform",
-      "Parameters": {
-        "Stage": "check_completed"
-      },
       "Next": "Refresh"
     },
     "Refresh": {
@@ -35,14 +27,6 @@
       "Resource": "manageiq://embedded_terraform",
       "Parameters": {
         "Stage": "refresh"
-      },
-      "Next": "CheckRefreshed"
-    },
-    "CheckRefreshed": {
-      "Type": "Task",
-      "Resource": "manageiq://embedded_terraform",
-      "Parameters": {
-        "Stage": "CheckRefreshed"
       },
       "Next": "PostProcess"
     },

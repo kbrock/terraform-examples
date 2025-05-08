@@ -3,11 +3,7 @@
   "StartAt": "Start",
   "States": {
     "Start": {
-      "Type": "Task",
-      "Resource": "manageiq://embedded_terraform",
-      "Parameters": {
-        "Stage": "start"
-      },
+      "Type": "Pass",
       "Next": "PreProcess"
     },
     "PreProcess": {
